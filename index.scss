@@ -2,7 +2,23 @@ $main-color: #009988;
 $light-color: #767676;
 $dark-color: #000000;
 
+.container {
+    background-color: lightgray;
+}
 
-p {
+.about {
+    width: 900px;
+    height: 600px;
+    border: $dark-color;
+    float: right;
+    padding: 5px;
+    background-color: white;
+}
+.about b {
     color: $light-color;
+} 
+.contact {
+    width: 500px;
+    height: 1000px;
+    background-color: white;
 }
