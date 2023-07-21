@@ -9,6 +9,10 @@ body {
   background-color: #f1f1f1;
 }
 
+a {
+  text-decoration: none;
+}
+
 .separator {
   margin: 16px 0;
   border: 1px solid #eee;
@@ -30,147 +34,148 @@ body {
   width: 50%;
 }
 
+.w-30 {
+  width: 30%;
+}
+
+.shadow {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #fff;
+}
+
 .app {
   display: flex;
   max-width: 1400px;
   width: 100%;
   margin: 16px auto;
   justify-content: space-between;
+  flex-direction: column;
 }
 .app i {
   color: #009988;
   margin-right: 16px;
 }
-.app .contact {
-  width: 33%;
-  min-height: 100vh;
+.app .about-me {
+  width: 100%;
 }
-.app .contact .avatar {
+.app .about-me .avatar {
   position: relative;
 }
-.app .contact .avatar img {
+.app .about-me .avatar img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
 }
-.app .contact .avatar span {
+.app .about-me .avatar span {
   position: absolute;
   bottom: 10px;
   left: 10px;
   font-size: 26px;
 }
-.app .contact .info {
+.app .about-me .info {
   color: #767676;
   padding: 0 16px 16px;
 }
-.app .contact .info .detail-item {
+.app .about-me .info .detail-item {
   padding: 8px 0;
 }
-.app .contact .info .detail-item span {
+.app .about-me .info .detail-item span {
   color: #767676;
   margin-left: 8px;
 }
-.app .contact .info .skills .title {
+.app .about-me .info .skills .title {
   display: flex;
   align-items: center;
   margin-bottom: 24px;
 }
-.app .contact .info .skills .title span {
+.app .about-me .info .skills .title span {
   font-size: 24px;
   margin-left: 12px;
   font-weight: bold;
 }
-.app .contact .info .skills .skill .title {
+.app .about-me .info .skills .skill .title {
   margin: 16px 0 12px;
 }
-.app .contact .info .skills .skill .progress-wrapper {
+.app .about-me .info .skills .skill .progress-wrapper {
   position: relative;
 }
-.app .contact .info .skills .skill .progress-wrapper div {
+.app .about-me .info .skills .skill .progress-wrapper div {
   height: 18px;
   border-radius: 9px;
 }
-.app .contact .info .skills .skill .progress-wrapper .background {
+.app .about-me .info .skills .skill .progress-wrapper .background {
   background-color: #f1f1f1;
 }
-.app .contact .info .skills .skill .progress-wrapper .progress {
+.app .about-me .info .skills .skill .progress-wrapper .progress {
   background-color: #009988;
   position: absolute;
   top: 0;
   color: #fff;
   text-align: center;
 }
-.app .contact .info .languages {
+.app .about-me .info .languages {
   margin-top: 24px;
 }
-.app .contact .info .languages .language .title {
+.app .about-me .info .languages .language .title {
   margin: 16px 0 12px;
 }
-.app .contact .info .languages .language .progress-wrapper {
+.app .about-me .info .languages .language .progress-wrapper {
   position: relative;
 }
-.app .contact .info .languages .language .progress-wrapper div {
+.app .about-me .info .languages .language .progress-wrapper div {
   height: 18px;
   border-radius: 9px;
 }
-.app .contact .info .languages .language .progress-wrapper .background {
+.app .about-me .info .languages .language .progress-wrapper .background {
   background-color: #f1f1f1;
 }
-.app .contact .info .languages .language .progress-wrapper .progress {
+.app .about-me .info .languages .language .progress-wrapper .progress {
   background-color: #009988;
   position: absolute;
   top: 0;
   color: #fff;
   text-align: center;
 }
-.app .about {
-  width: 65%;
-  height: 600px;
+.app .experience-skills {
+  width: 100%;
 }
-.app .about h2 {
+.app .experience-skills h2 {
   padding: 16px 0px;
   margin: 10px 0px;
   font-size: 30px;
 }
-.app .about h4 {
+.app .experience-skills h4 {
   color: #009988;
   font-size: 16px;
   font-weight: 400;
   margin: 10px 0;
 }
-.app .about b {
+.app .experience-skills b {
   color: #767676;
 }
-.app .about .work-experience {
+.app .experience-skills .work-experience {
   margin-bottom: 24px;
   padding: 20px;
   color: #767676;
   height: 460px;
 }
-.app .about .work-experience div {
+.app .experience-skills .work-experience div {
   color: black;
 }
-.app .about .back {
+.app .experience-skills .back {
   background-color: #009988;
   color: #fff;
   border-radius: 4px;
   padding: 4px;
 }
-.app .about .education {
+.app .experience-skills .education {
   padding: 20px;
   color: #767676;
   height: 430px;
 }
-.app .about .education__item {
+.app .experience-skills .education__item {
   margin-bottom: 32px;
 }
-.app .about .education__item div {
+.app .experience-skills .education__item div {
   color: #000;
-}
-
-.shadow {
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: #fff;
 }
 
 footer {
@@ -185,6 +190,19 @@ footer > *, footer a {
 }
 footer i {
   margin: 0 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .app {
+    flex-direction: row;
+  }
+  .app .about-me {
+    width: 33%;
+    min-height: 100vh;
+  }
+  .app .experience-skills {
+    width: 65%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

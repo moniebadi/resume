@@ -19,6 +19,10 @@ body {
 //     color: $main-color;
 // }
 
+a {
+    text-decoration: none;
+}
+
 .separator {
     margin: 16px 0;
     border: 1px solid #eee;
@@ -40,31 +44,40 @@ body {
     width: 50%;
 }
 
+.w-30 {
+    width: 30%;
+}
+
+
+// change it to mixin
+.shadow {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #fff;
+}
+
 .app {
     display: flex;
     max-width: 1400px;
     width: 100%;
     margin: 16px auto;
     justify-content: space-between;
+    flex-direction: column;
 
     i {
         color: $main-color;
         margin-right: 16px;
     }
 
-    .contact {
-        width: 33%;
-        min-height: 100vh;
-
+    .about-me {
+        width: 100%;
+    
         .avatar {
             position: relative;
-
+    
             img {
                 width: 100%;
-                height: auto;
-                object-fit: cover;
             }
-
+    
             span {
                 position: absolute;
                 bottom: 10px;
@@ -72,55 +85,55 @@ body {
                 font-size: 26px;
             }
         }
-
+    
         .info {
             color: $light-gray;
             padding: 0 16px 16px;
-
+    
             .detail {
                 &-item {
                     padding: 8px 0;
-
+    
                     span {
                         color: $light-gray;
                         margin-left: 8px;
                     }
                 }
             }
-
+    
             .skills {
-
+    
                 .title {
                     display: flex;
                     align-items: center;
                     margin-bottom: 24px;
-
+    
                     span {
                         font-size: 24px;
                         margin-left: 12px;
                         font-weight: bold;
-
+    
                     }
-
+    
                 }
-
+    
                 .skill {
                     .title {
                         margin: 16px 0 12px;
                     }
-
+    
                     .progress-wrapper {
                         position: relative;
-
+    
                         div {
                             height: 18px;
                             border-radius: 9px;
                         }
-
+    
                         .background {
                             background-color: $background-color;
                         }
-
+    
                         .progress {
                             background-color: $main-color;
                             position: absolute;
@@ -131,26 +144,26 @@ body {
                     }
                 }
             }
-
+    
             .languages {
                 margin-top: 24px;
                 .language {
                     .title {
                         margin: 16px 0 12px;
                     }
-
+    
                     .progress-wrapper {
                         position: relative;
-
+    
                         div {
                             height: 18px;
                             border-radius: 9px;
                         }
-
+    
                         .background {
                             background-color: $background-color;
                         }
-
+    
                         .progress {
                             background-color: $main-color;
                             position: absolute;
@@ -162,37 +175,35 @@ body {
                 }
             }
         }
-
     }
-
-    .about {
-        width: 65%;
-        height: 600px;
-
+    
+    .experience-skills {
+        width: 100%;
+    
         h2 {
             padding: 16px 0px;
             margin: 10px 0px;
             font-size: 30px;
         }
-
+    
        h4 {
            color: $main-color;
            font-size: 16px;
            font-weight: 400;
            margin: 10px 0;
        }
-
-
+    
+    
         & b {
             color: $light-gray;
         }
-
+    
         .work-experience {
             margin-bottom: 24px;
             padding: 20px;
             color: $light-gray;
             height: 460px;
-
+    
             // h2 {
                 // margin-top: 0;
             // }
@@ -206,12 +217,12 @@ body {
             border-radius: 4px;
             padding: 4px;
         }
-
+    
         .education {
             padding: 20px;
             color: $light-gray;
             height: 430px;
-
+    
             &__item {
                 margin-bottom: 32px;
                 div {
@@ -221,14 +232,6 @@ body {
         }
     }
 }
-
-
-// change it to mixin
-.shadow {
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #fff;
-}
-
 
 footer {
     background: $main-color;
@@ -245,3 +248,25 @@ footer {
         margin: 0 5px;
     }
 }
+
+
+
+@media only screen and (min-width: 768px) {
+    .app {
+        flex-direction: row;
+    
+       
+    
+        .about-me {
+            width: 33%;
+            min-height: 100vh;
+        }
+    
+        .experience-skills {
+            width: 65%;
+    
+            
+        }
+    }
+}
+
